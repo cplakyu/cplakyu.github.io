@@ -4,6 +4,12 @@
     <title>Email Tracking Pixel</title>
 </head>
 <body>
-    <img src="https://script.google.com/macros/s/AKfycbz_X8cRAQQqGqJRJAmBox4hVrH3eyuln-aA0ELswDASCqEu4VOTN_kZMRfx36WHBwo6/exec">
+    <p>이메일 추적 테스트</p>
+    <img src="" alt="" width="1" height="1" id="tracking-pixel">
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const email = urlParams.get('email');
+        document.getElementById('tracking-pixel').src = `https://script.google.com/macros/s/AKfycbz_X8cRAQQqGqJRJAmBox4hVrH3eyuln-aA0ELswDASCqEu4VOTN_kZMRfx36WHBwo6/exec?email=${email}`;
+    </script>
 </body>
 </html>
